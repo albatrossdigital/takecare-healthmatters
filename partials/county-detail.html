@@ -1,0 +1,405 @@
+
+<div class="row">
+
+
+<a href="#/" class="button right">Select Another County</a>
+<h1>{{county.county}} County</h1>
+
+<div class="row">
+
+
+
+  <div class="medium-8 county-table columns">
+   <accordion>
+
+      <!-- BHO -->
+      <accordion-group heading="Behavioral Health Organization (BHO)" is-open="true">
+        <div class="row">
+          <div class="small-12 medium-3 columns"><strong>Name</strong>
+          </div>
+          <div class="small-12 medium-9 columns">{{county.behavioralhealthorganizationbhonameentity}}</div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-3 columns"><strong>Phone</strong>
+          </div>
+          <div class="small-12 medium-9 columns">{{county.bhophone1}}</div>
+          <div ng-if="county.bhophone2" class="small-12 medium-9 columns">{{county.bhophone2}}</div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-3 columns"><strong>Email</strong>
+          </div>
+          <div class="small-12 medium-9 columns"><a href="mailto:{{county.bhoemail}}">{{county.bhoemail}}</a></div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-3 columns"><strong>Website</strong>
+          </div>
+          <div class="small-12 medium-9 columns"><a href="{{county.bhowebsite}}">{{county.bhowebsite}}</a></div>
+        </div>
+      </accordion-group>
+
+      <!-- RCCO -->
+      <accordion-group heading="Regional Care Collaborative Organization (RCCO)">
+        <div class="row">
+          <div class="small-12 medium-3 columns"><strong>Name</strong>
+          </div>
+          <div class="small-12 medium-9 columns">{{county.rcconameentity}}</div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-3 columns"><strong>Phone</strong>
+          </div>
+          <div class="small-12 medium-9 columns">{{county.rccophone1}}</div>
+          <div ng-if="county.rccophone2" class="small-12 medium-9 columns">{{county.rccophone2}}</div>
+        </div>
+        <div class="row" ng-if="county.rccoemail">
+          <div class="small-12 medium-3 columns"><strong>Email</strong>
+          </div>
+          <div class="small-12 medium-9 columns"><a href="mailto:{{county.rccoemail}}">{{county.rccoemail}}</a></div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-3 columns"><strong>Website</strong>
+          </div>
+          <div class="small-12 medium-9 columns"><a href="{{county.bhowebsite}}">{{county.rccowebsite}}</a></div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-3 columns"><strong>Region</strong>
+          </div>
+          <div class="small-12 medium-9 columns">{{county.bhowebsite}}</div>
+        </div>
+      </accordion-group>
+
+      <!-- Probation Information -->
+      <accordion-group heading="Probation Information">
+        <h5>Judicial District {{county.judicialdistrictnumber}}</h5>
+        <div class="row" ng-if="county.probationcontactfname">
+          <div class="small-12 medium-3 columns"><strong>Contact Person</strong>
+          </div>
+          <div class="small-12 medium-9 columns">{{county.probationcontactfname}} {{county.probationcontactlname}} {{county.probationcontactsuffix}}</div>
+          <div class="small-12 medium-9 columns">{{county.probationcontacttitle}}</div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-3 columns"><strong>Phone</strong>
+          </div>
+          <div class="small-12 medium-9 columns">{{county.probationphone1}}</div>
+          <div ng-if="county.probationphone2" class="small-12 medium-9 columns">{{county.probationphone2}}</div>
+        </div>
+        <div class="row" ng-if="county.probationemail">
+          <div class="small-12 medium-3 columns"><strong>Email</strong>
+          </div>
+          <div class="small-12 medium-9 columns"><a href="mailto:{{county.probationemail}}">{{county.probationemail}}</a></div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-3 columns"><strong>Website</strong>
+          </div>
+          <div class="small-12 medium-9 columns"><a href="{{county.probationwebsite}}">{{county.probationwebsite}}</a></div>
+        </div>
+      </accordion-group>
+
+      <!-- Problem Solving Courts (x7) -->
+      <accordion-group heading="Problem Solving Court">
+        <div>
+          <h5>{{county.problemsolvingcourt1nameentity}}</h5>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Contact Person</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt1contactfname}} {{county.problemsolvingcourt1contactlname}} {{county.problemsolvingcourt1contactsuffix}}</div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt1contacttitle}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Phone</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt1phone1}}</div>
+            <div ng-if="county.problemsolvingcourt1phone2" class="small-12 medium-9 columns">{{county.problemsolvingcourt1phone2}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Email</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="mailto:{{county.problemsolvingcourt1email}}">{{county.problemsolvingcourt1email}}</a></div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Website</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="{{county.problemsolvingcourt1website}}">{{county.problemsolvingcourt1website}}</a></div>
+          </div>
+        </div>
+
+        <div ng-if="county.problemsolvingcourt2nameentity">
+          <h5>{{county.problemsolvingcourt2nameentity}}</h5>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Contact Person</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt2contactfname}} {{county.problemsolvingcourt2contactlname}} {{county.problemsolvingcourt2contactsuffix}}</div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt2contacttitle}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Phone</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt2phone1}}</div>
+            <div ng-if="county.problemsolvingcourt2phone2" class="small-12 medium-9 columns">{{county.problemsolvingcourt2phone2}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Email</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="mailto:{{county.problemsolvingcourt2email}}">{{county.problemsolvingcourt2email}}</a></div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Website</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="{{county.problemsolvingcourt2website}}">{{county.problemsolvingcourt2website}}</a></div>
+          </div>
+        </div>
+
+        <div ng-if="county.problemsolvingcourt3nameentity">
+          <h5>{{county.problemsolvingcourt3nameentity}}</h5>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Contact Person</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt3contactfname}} {{county.problemsolvingcourt3contactlname}} {{county.problemsolvingcourt3contactsuffix}}</div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt3contacttitle}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Phone</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt3phone1}}</div>
+            <div ng-if="county.problemsolvingcourt3phone2" class="small-12 medium-9 columns">{{county.problemsolvingcourt3phone2}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Email</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="mailto:{{county.problemsolvingcourt3email}}">{{county.problemsolvingcourt3email}}</a></div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Website</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="{{county.problemsolvingcourt3website}}">{{county.problemsolvingcourt2website}}</a></div>
+          </div>
+        </div>
+
+        <div ng-if="county.problemsolvingcourt4nameentity">
+          <h5>{{county.problemsolvingcourt4nameentity}}</h5>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Contact Person</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt4contactfname}} {{county.problemsolvingcourt4contactlname}} {{county.problemsolvingcourt4contactsuffix}}</div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt4contacttitle}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Phone</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt4phone1}}</div>
+            <div ng-if="county.problemsolvingcourt4phone2" class="small-12 medium-9 columns">{{county.problemsolvingcourt4phone2}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Email</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="mailto:{{county.problemsolvingcourt4email}}">{{county.problemsolvingcourt4email}}</a></div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Website</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="{{county.problemsolvingcourt4website}}">{{county.problemsolvingcourt4website}}</a></div>
+          </div>
+        </div>
+
+        <div ng-if="county.problemsolvingcourt5nameentity">
+          <h5>{{county.problemsolvingcourt6nameentity}}</h5>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Contact Person</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt6contactfname}} {{county.problemsolvingcourt5contactlname}} {{county.problemsolvingcourt5contactsuffix}}</div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt5contacttitle}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Phone</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt5phone1}}</div>
+            <div ng-if="county.problemsolvingcourt5phone2" class="small-12 medium-9 columns">{{county.problemsolvingcourt5phone2}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Email</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="mailto:{{county.problemsolvingcourt5email}}">{{county.problemsolvingcourt5email}}</a></div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Website</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="{{county.problemsolvingcourt5website}}">{{county.problemsolvingcourt5website}}</a></div>
+          </div>
+        </div>
+
+        <div ng-if="county.problemsolvingcourt6nameentity">
+          <h5>{{county.problemsolvingcourt6nameentity}}</h5>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Contact Person</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt6contactfname}} {{county.problemsolvingcourt6contactlname}} {{county.problemsolvingcourt6contactsuffix}}</div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt6contacttitle}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Phone</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt6phone1}}</div>
+            <div ng-if="county.problemsolvingcourt6phone2" class="small-12 medium-9 columns">{{county.problemsolvingcourt6phone2}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Email</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="mailto:{{county.problemsolvingcourt6email}}">{{county.problemsolvingcourt6email}}</a></div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Website</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="{{county.problemsolvingcourt6website}}">{{county.problemsolvingcourt6website}}</a></div>
+          </div>
+        </div>
+
+        <div ng-if="county.problemsolvingcourt7nameentity">
+          <h5>{{county.problemsolvingcourt6nameentity}}</h5>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Contact Person</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt6contactfname}} {{county.problemsolvingcourt7contactlname}} {{county.problemsolvingcourt7contactsuffix}}</div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt7contacttitle}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Phone</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.problemsolvingcourt7phone1}}</div>
+            <div ng-if="county.problemsolvingcourt7phone2" class="small-12 medium-9 columns">{{county.problemsolvingcourt7phone2}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Email</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="mailto:{{county.problemsolvingcourt7email}}">{{county.problemsolvingcourt7email}}</a></div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Website</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="{{county.problemsolvingcourt7website}}">{{county.problemsolvingcourt7website}}</a></div>
+          </div>
+        </div>
+
+      </accordion-group>
+
+      <!-- Probation Information -->
+      <accordion-group heading="Parole Information">
+        <div>
+          <h5>Region {{county.parole1region}}</h5>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Contact Person</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.parole1contactfname}} {{county.parole1contactlname}} {{county.parole1contactsuffix}}</div>
+            <div class="small-12 medium-9 columns">{{county.parole1contacttitle}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Phone</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.parole1phone1}}</div>
+            <div ng-if="county.parole1phone2" class="small-12 medium-9 columns">{{county.parole1phone2}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Email</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="mailto:{{county.parole1email}}">{{county.parole1email}}</a></div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Website</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="{{county.parole1website}}">{{county.parole1website}}</a></div>
+          </div>
+        </div>
+
+        <div ng-if="county.parole2region">
+          <h5>Region {{county.parole2region}}</h5>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Contact Person</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.parole2contactfname}} {{county.parole2contactlname}} {{county.parole2contactsuffix}}</div>
+            <div class="small-12 medium-9 columns">{{county.parole2contacttitle}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Phone</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.parole2phone1}}</div>
+            <div ng-if="county.parole2phone2" class="small-12 medium-9 columns">{{county.parole2phone2}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Email</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="mailto:{{county.parole2email}}">{{county.parole2email}}</a></div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Website</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="{{county.parole2website}}">{{county.parole2website}}</a></div>
+          </div>
+        </div>
+
+        <div ng-if="county.parole3region">
+          <h5>Region {{county.parole3region}}</h5>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Contact Person</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.parole3contactfname}} {{county.parole3contactlname}} {{county.parole3contactsuffix}}</div>
+            <div class="small-12 medium-9 columns">{{county.parole3contacttitle}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Phone</strong>
+            </div>
+            <div class="small-12 medium-9 columns">{{county.parole3phone1}}</div>
+            <div ng-if="county.parole3phone2" class="small-12 medium-9 columns">{{county.parole3phone2}}</div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Email</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="mailto:{{county.parole3email}}">{{county.parole3email}}</a></div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 columns"><strong>Website</strong>
+            </div>
+            <div class="small-12 medium-9 columns"><a href="{{county.parole3website}}">{{county.parole3website}}</a></div>
+          </div>
+        </div>
+
+      </accordion-group>
+
+      <!-- Jail Information -->
+      <accordion-group heading="Jail Information">
+        <div class="row">
+          <div class="small-12 medium-3 columns"><strong>Name</strong>
+          </div>
+          <div class="small-12 medium-9 columns">{{county.jailnameentity}}</div>
+        </div>
+        <div class="row" ng-if="county.jailcontactfname">
+          <div class="small-12 medium-3 columns"><strong>Contact Person</strong>
+          </div>
+          <div class="small-12 medium-9 columns">{{county.jailcontactfname}} {{county.jailcontactlname}} {{county.jailcontactsuffix}}</div>
+          <div class="small-12 medium-9 columns">{{county.jailcontacttitle}}</div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-3 columns"><strong>Phone</strong>
+          </div>
+          <div class="small-12 medium-9 columns">{{county.jailphone1}}</div>
+          <div ng-if="county.jailphone2" class="small-12 medium-9 columns">{{county.jailphone2}}</div>
+        </div>
+        <div class="row" ng-if="county.jailemail">
+          <div class="small-12 medium-3 columns"><strong>Email</strong>
+          </div>
+          <div class="small-12 medium-9 columns"><a href="mailto:{{county.jailemail}}">{{county.jailemail}}</a></div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-3 columns"><strong>Website</strong>
+          </div>
+          <div class="small-12 medium-9 columns"><a href="{{county.jailwebsite}}">{{county.jailwebsite}}</a></div>
+        </div>
+      </accordion-group>
+
+    </accordion>
+
+
+  </div>
+
+  <div class="columns medium-4">
+    <sidebar />
+  </div>
+
+</div>

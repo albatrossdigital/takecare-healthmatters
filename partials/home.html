@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="medium-8 columns medium-push-2 county-input">
+    <div class="row collapse">
+      <div class="small-10 columns">
+        <h2>Search by County:</h2>
+        <input type="text" placeholder="Enter your county..." ng-model="selected" typeahead="item.county for item in data | filter:$viewValue | limitTo:8" typeahead-on-select="countySelected()" typeahead-editable="false" typeahead-min-length="0" class="form-control">
+
+      </div>
+      <div class="small-2 columns">
+        <a href="#" class="button postfix">Go</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+
+  <div class="columns medium-7">
+
+    <p class="intro">The purpose of this guide is to help Colorado criminal justice agencies, health care professionals and community organizations locate professional resources to assist justice involved individuals who qualify for Medicaid.</p>
+    <p>A person's specific status and interaction with the criminal justice system may affect Medicaid eligibility and other health care options. This online guide provides county level health-related and criminal justice-related information to help professionals in these fields build relationships and assist their clients with better access to care.</p>
+
+  </div>
+
+  <div class="columns medium-3 medium-push-1">
+    <p class="gray">This guide also provides links to the Blue Guide Colorado, an extensive resource that helps individuals, families and community organizations locate health care providers and health care access assistance sites.</p>
+    <p>
+      <a href="http://blueguide.cohealthinitiative.org" target="_blank"><img src="img/blueguide-home.png" alt="Blue Guide Colorado" /></a>
+    </p>
+  </div>
+
+</div>
+
+
+<div class="row">
+
+  <div class="columns medium-7">
+    <hr />
+    <p class="gray">Take Care Health Matters is a joint project of:</p>
+    <p>
+      <a href="http://www.ccjrc.org/" target="_blank"><img src="img/ccjc.png" alt="Colorado Criminal Justice Reform Coalition" /></a>
+      <a href="http://cclponline.org/" target="_blank"><img src="img/law-policy.png" alt="Colorado Center on Law & Policy" /></a>
+    </p>
+  </div>
+
+  <div class="columns medium-3 medium-push-1">
+    <hr />
+    <p class="gray">In partnership with:</p>
+    <p><a href="http://cohealthinitiative.org" target="_blank"><img src="img/cchi.png" alt="Colorado Consumer Health Initiative" /></a></p>
+  </div>
+
+</div>
