@@ -4,9 +4,8 @@
 
 var justiceControllers = angular.module('justiceControllers', ['mm.foundation']);
 
-justiceControllers.controller('HomeCtrl', ['$scope', '$http', '$location',
-  function($scope, $http, $location) {
-    $scope.class = 'front';
+justiceControllers.controller('HomeCtrl', ['$scope', '$http', '$location', '$rootScope',
+  function($scope, $http, $location, $rootScope) {
     $http.get('json/counties.json').success(function(data) {
       $scope.data = data;
       console.log(data);
@@ -17,10 +16,12 @@ justiceControllers.controller('HomeCtrl', ['$scope', '$http', '$location',
     $scope.countySelected = function($event) {
       $location.path('/county/' + $scope.selected.replace(' ', '_'));
     }
+
+    $rootScope.class = 'home';
   }]);
 
-justiceControllers.controller('CountyDetailCtrl', ['$scope', '$routeParams', 'County',
-  function($scope, $routeParams, County) {
+justiceControllers.controller('CountyDetailCtrl', ['$scope', '$routeParams', 'County', '$rootScope',
+  function($scope, $routeParams, County, $rootScope) {
     $scope.class = '';
     $scope.county = County.get({countyId: $routeParams.countyId}, function(county) {
       //$scope.mainImageUrl = phone.images[0];
@@ -30,4 +31,6 @@ justiceControllers.controller('CountyDetailCtrl', ['$scope', '$routeParams', 'Co
     $scope.setImage = function(imageUrl) {
       $scope.mainImageUrl = imageUrl;
     }
+
+    $rootScope.class = 'county';
   }]);

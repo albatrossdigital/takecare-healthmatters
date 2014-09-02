@@ -1,13 +1,13 @@
 <div class="row">
   <div class="medium-8 columns medium-push-2 county-input">
+    <h1>Search by County</h1>
     <div class="row collapse">
       <div class="small-10 columns">
-        <h2>Search by County:</h2>
         <input type="text" placeholder="Enter your county..." ng-model="selected" typeahead="item.county for item in data | filter:$viewValue | limitTo:8" typeahead-on-select="countySelected()" typeahead-editable="false" typeahead-min-length="0" class="form-control">
 
       </div>
       <div class="small-2 columns">
-        <a href="#" class="button postfix">Go</a>
+        <a href="#" class="button postfix search-submit">Go</a>
       </div>
     </div>
   </div>
