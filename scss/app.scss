@@ -130,6 +130,14 @@ h5 {
   background: url(../img/mapbg-1024.jpg) center;
 }
 
+@media only screen and (max-width: 1600px) {
+  background-image: url(../img/mapbg-1600.jpg)
+}
+
+@media only screen and (min-width: 1601px) {
+  background-image: url(../img/mapbg-1600.jpg)
+}
+
 .logo {
   max-width: 8em;
   margin: 1em;
