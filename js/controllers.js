@@ -18,7 +18,8 @@ justiceControllers.controller('HomeCtrl', ['$scope', '$http', '$location', '$roo
     }
 
     $rootScope.class = 'home';
-  }]);
+  }
+]);
 
 justiceControllers.controller('CountyDetailCtrl', ['$scope', '$routeParams', 'County', '$rootScope',
   function($scope, $routeParams, County, $rootScope) {
@@ -33,4 +34,11 @@ justiceControllers.controller('CountyDetailCtrl', ['$scope', '$routeParams', 'Co
     }
 
     $rootScope.class = 'county';
-  }]);
+  }
+]);
+
+justiceControllers.controller('PageCtrl', ['$scope', '$http', '$location', '$rootScope',
+  function($scope, $http, $location, $rootScope) {
+    $rootScope.class = 'page';
+  }
+]);

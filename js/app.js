@@ -22,6 +22,7 @@ justiceApp.config(['$routeProvider',
       }).
       when('/glossary', {
         templateUrl: 'partials/glossary.html',
+        controller: 'PageCtrl'
       }).
       otherwise({
         redirectTo: '/counties'

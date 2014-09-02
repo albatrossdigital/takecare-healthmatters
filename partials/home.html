@@ -1,16 +1,18 @@
+<div class="county-input">
 <div class="row">
-  <div class="medium-8 columns medium-push-2 county-input">
+  <div class="columns medium-8 medium-push-2 large-6 large-push-3">
     <h1>Search by County</h1>
     <div class="row collapse">
       <div class="small-10 columns">
-        <input type="text" placeholder="Enter your county..." ng-model="selected" typeahead="item.county for item in data | filter:$viewValue | limitTo:8" typeahead-on-select="countySelected()" typeahead-editable="false" typeahead-min-length="0" class="form-control">
+        <input type="text" placeholder="Enter a Colorado county..." ng-model="selected" typeahead="item.county for item in data | filter:$viewValue | limitTo:8" typeahead-on-select="countySelected()" typeahead-editable="false" typeahead-min-length="0" class="form-control">
 
       </div>
       <div class="small-2 columns">
-        <a href="#" class="button postfix search-submit">Go</a>
+        <a href="#" class="button postfix search-submit uppercase">Go</a>
       </div>
     </div>
   </div>
+</div>
 </div>
 
 
@@ -23,7 +25,7 @@
 
   </div>
 
-  <div class="columns medium-3 medium-push-1">
+  <div class="columns medium-4">
     <p class="gray">This guide also provides links to the Blue Guide Colorado, an extensive resource that helps individuals, families and community organizations locate health care providers and health care access assistance sites.</p>
     <p>
       <a href="http://blueguide.cohealthinitiative.org" target="_blank"><img src="img/blueguide-home.png" alt="Blue Guide Colorado" /></a>
@@ -44,7 +46,7 @@
     </p>
   </div>
 
-  <div class="columns medium-3 medium-push-1">
+  <div class="columns medium-4">
     <hr />
     <p class="gray">In partnership with:</p>
     <p><a href="http://cohealthinitiative.org" target="_blank"><img src="img/cchi.png" alt="Colorado Consumer Health Initiative" /></a></p>

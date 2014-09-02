@@ -2,15 +2,11 @@
 <div class="row">
 
 
-<a href="#/" class="button right">Select Another County</a>
-<h1>{{county.county}} County</h1>
 
-<div class="row">
+  <div class="medium-7 county-table columns">
+    <h1>{{county.county}} County</h1>
 
-
-
-  <div class="medium-8 county-table columns">
-   <accordion>
+    <accordion>
 
       <!-- BHO -->
       <accordion-group heading="Behavioral Health Organization (BHO)" is-open="true">
@@ -399,7 +395,9 @@
   </div>
 
   <div class="columns medium-4">
-    <sidebar />
+    <a href="#/" class="button uppercase button-back">Select Another County</a>
+    <hr />
+    <sidebar class="sidebar" />
   </div>
 
 </div>

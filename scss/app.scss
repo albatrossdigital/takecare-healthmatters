@@ -59,23 +59,27 @@ h2 {
 }
 
 h3 {
- font-family: 'futura-pt', sans-serif;
+  font-family: 'futura-pt', sans-serif;
   font-weight: 700;
-  font-size: 30px;
-  margin-bottom: 2rem;
+  font-size: 22px;
+  margin-bottom: .5rem;
   margin-top: .5rem;
   line-height: 1em;
   color: #222;
 }
 
 
-h4 {
+h4,
+accordion dd>a.ng-binding {
   font-family: 'pragmatica-web', sans-serif;
   font-weight: 400;
   font-size: 20px;
   color: $blue;
-  margin: .5rem 0;
   padding-left: .5rem;
+}
+
+h4 {
+  margin: .5rem 0;
 }
 
 h5 {
@@ -85,45 +89,54 @@ h5 {
   padding: 1em 0;
 }
 
-/* Buttons */
+/* Forms */
 
 .button {
-  text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 15px;
-  font-family: 'pragmatica-web';
   font-weight: 400;
-  background: #3949ab;
-  border-radius: 4px;
-  padding: 20px 20px;
-  margin-top: 1.5em;
+  background: $blue-dark;
+  font-family: 'futura-pt', sans-serif;
+  border-radius: $global-radius;
 }
 
 .button:hover {
   background: #283593;
 }
 
+input[type="text"] {
+  border-radius: $global-radius;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
 /* Accordion */
 
-.accordion .accordion-navigation>a {
-  background: #f4f7fa;
-  color: $blue;
-  border-bottom: 2px solid #fff;
-}
+accordion{
 
-.accordion .accordion-navigation>a:hover {
-  background: $blue-light;
-  color: #222;
-}
+  a.ng-binding {
+    background: #f4f7fa;
+    color: $blue;
+    border-bottom: 2px solid #fff;
 
-.accordion .accordion-navigation.active>a {
-  background: $blue-light;
-  border-bottom: none;
-}
+    &:hover {
+      background: $blue-light;
+      color: #222;
+    }
 
+    &:active {
+      background: $blue-light;
+      border-bottom: none;
+    }
+  }
 
-.accordion .accordion-navigation.active>a h4 {
-
+  .content {
+    a {
+      background: none !important;
+    }
+  }
 }
 
 
@@ -136,6 +149,11 @@ h5 {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  animation-duration: 1s;
+}
+
+.home .header {
+  height: 575px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -156,26 +174,62 @@ h5 {
   }
 }
 
-.logo {
-  max-width: 8em;
-  margin: 1em;
+.header {
+  padding-top: 1em;
+
+  ul li {
+    list-style: none;
+    float: left;
+    margin-left: 1em;
+
+    a.button {
+      background-color: $white;
+      border: 1px solid $blue-dark;
+      color: $blue-dark;
+      border-right-color: $blue;
+      border-bottom-color: $blue;
+
+      &:hover {
+        color: $blue;
+        border-color: $blue;
+        border-right-color: $blue-dark;
+        border-bottom-color: $blue-dark;
+      }
+
+    }
+  }
+
+  .logo {
+    max-width: 8em;
+  }
+
 }
 
-.top-bar {
-  min-height: 8em;
-  background: #fafafa;
-}
 
-.top-bar-section {
-  background: #f4f7fa;
-  background-color: #f4f7fa;
-}
-
+// Home
 .county-input {
   margin-top: 3em;
   margin-bottom: 2em;
+
+  .search-submit {
+    margin: 0 0 0 1em;
+  }
 }
 
+.home .county-input {
+  position: relative;
+  margin-top: -350px;
+  height: 350px;
+}
+
+.f-dropdown {
+  li.active a{
+    background-color: $gray-light;
+  }
+}
+
+
+// County page
 .county-table .row {
   padding: 1em 0;
   border-bottom: 1px solid #eee;
@@ -188,16 +242,22 @@ h5 {
   line-height: 1.6em;
 }
 
+.button-back {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
 
-.f-dropdown {
-  li.active a{
-    background-color: $gray-light;
+
+.sidebar {
+  .blue-guide {
+    padding: 20px;
+    background-color: $blue-guide;
+    border-radius: $global-radius;
   }
 }
 
-.search-submit {
-  margin: 0 0 0 1em;
-}
+
+
 
 
 
