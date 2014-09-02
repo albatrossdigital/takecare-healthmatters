@@ -120,6 +120,7 @@ accordion{
     background: #f4f7fa;
     color: $blue;
     border-bottom: 2px solid #fff;
+    padding-left: 1em !important;
 
     &:hover {
       background: $blue-light;
@@ -135,6 +136,7 @@ accordion{
   .content {
     a {
       background: none !important;
+      padding: 0 !important;
     }
   }
 }
@@ -191,6 +193,8 @@ accordion{
         color: $blue-dark;
         border-right-color: $blue;
         border-bottom-color: $blue;
+        padding-top: .75rem;
+        padding-bottom: .75rem;
 
         &:hover {
           color: $blue;
