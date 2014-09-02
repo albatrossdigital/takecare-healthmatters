@@ -18,12 +18,16 @@ p {
   margin-bottom: 2em;
 }
 
+p.gray {
+  color: $gray-dark;
+}
+
 a {
-  color: #1b75bb;
+  color: $blue;
 }
 
 a:hover {
-  color: #f7931d;
+  color: $orange;
 }
 
 p.intro {
@@ -69,7 +73,7 @@ h4 {
   font-family: 'pragmatica-web', sans-serif;
   font-weight: 400;
   font-size: 20px;
-  color: #1b75bb;
+  color: $blue;
   margin: .5rem 0;
   padding-left: .5rem;
 }
@@ -103,17 +107,17 @@ h5 {
 
 .accordion .accordion-navigation>a {
   background: #f4f7fa;
-  color: #1b75bb;
+  color: $blue;
   border-bottom: 2px solid #fff;
 }
 
 .accordion .accordion-navigation>a:hover {
-  background: #eaf0f5;
+  background: $blue-light;
   color: #222;
 }
 
 .accordion .accordion-navigation.active>a {
-  background: #eaf0f5;
+  background: $blue-light;
   border-bottom: none;
 }
 
@@ -127,15 +131,29 @@ h5 {
 
 .header {
   margin-bottom: 1em;
-  background: url(../img/mapbg-1024.jpg) center;
+  background: no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-@media only screen and (max-width: 1600px) {
-  background-image: url(../img/mapbg-1600.jpg)
+@media screen and (max-width: 1024px) {
+  .header{
+    background-image: url(../img/mapbg-1024.jpg);
+  }
 }
 
-@media only screen and (min-width: 1601px) {
-  background-image: url(../img/mapbg-1600.jpg)
+@media screen and (max-width: 1600px) {
+  .header{
+    background-image: url(../img/mapbg-1600.jpg)
+  }
+}
+
+@media screen and (min-width: 1601px) {
+  .header{
+    background-image: url(../img/mapbg-2400.jpg)
+  }
 }
 
 .logo {
@@ -169,6 +187,18 @@ h5 {
   font-size: 16px;
   line-height: 1.6em;
 }
+
+
+.f-dropdown {
+  li.active a{
+    background-color: $gray-light;
+  }
+}
+
+.search-submit {
+  margin: 0 0 0 1em;
+}
+
 
 
 
