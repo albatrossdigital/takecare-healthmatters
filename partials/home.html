@@ -4,7 +4,7 @@
     <h1>Search by County</h1>
     <div class="row collapse">
       <div class="small-10 columns">
-        <input type="text" placeholder="Enter a Colorado county..." ng-model="selected" typeahead="item.county for item in data | filter:$viewValue | limitTo:8" typeahead-on-select="countySelected()" typeahead-editable="false" typeahead-min-length="0" class="form-control">
+        <input type="text" placeholder="Enter a Colorado county..." ng-model="selected" typeahead="item.county for item in data | filter:$viewValue | limitTo:8" typeahead-on-select="countySelected()" typeahead-editable="false" typeahead-min-length="0" class="form-control" id="typeahead">
 
       </div>
       <div class="small-2 columns">
@@ -40,7 +40,7 @@
   <div class="columns medium-7">
     <hr />
     <p class="gray">Take Care Health Matters is a joint project of:</p>
-    <p>
+    <p class="sponsors">
       <a href="http://www.ccjrc.org/" target="_blank"><img src="img/ccjc.png" alt="Colorado Criminal Justice Reform Coalition" /></a>
       <a href="http://cclponline.org/" target="_blank"><img src="img/law-policy.png" alt="Colorado Center on Law & Policy" /></a>
     </p>

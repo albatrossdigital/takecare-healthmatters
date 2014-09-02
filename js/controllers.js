@@ -4,8 +4,8 @@
 
 var justiceControllers = angular.module('justiceControllers', ['mm.foundation']);
 
-justiceControllers.controller('HomeCtrl', ['$scope', '$http', '$location', '$rootScope',
-  function($scope, $http, $location, $rootScope) {
+justiceControllers.controller('HomeCtrl', ['$scope', '$http', '$location', '$timeout','$rootScope',
+  function($scope, $http, $location, $timeout, $rootScope) {
     $http.get('json/counties.json').success(function(data) {
       $scope.data = data;
       console.log(data);
@@ -16,6 +16,11 @@ justiceControllers.controller('HomeCtrl', ['$scope', '$http', '$location', '$roo
     $scope.countySelected = function($event) {
       $location.path('/county/' + $scope.selected.replace(' ', '_'));
     }
+
+    // @todo: make work
+    $timeout(function (){
+      angular.element('#typeahead').trigger('focus');
+    }, 1000);
 
     $rootScope.class = 'home';
   }
