@@ -8,13 +8,13 @@ justiceControllers.controller('HomeCtrl', ['$scope', '$http', '$location', '$tim
   function($scope, $http, $location, $timeout, $rootScope) {
     $http.get('json/counties.json').success(function(data) {
       $scope.data = data;
-      console.log(data);
-      //$scope.counties = 
     });
 
-    $scope.selected = undefined;
     $scope.countySelected = function($event) {
-      $location.path('/county/' + $scope.selected.replace(' ', '_'));
+      var val = $('#county').select2('val');
+      if (val != undefined) {
+        $location.path('/county/' + val.replace(' ', '_'));
+      }
     }
 
     // @todo: make work
@@ -29,10 +29,7 @@ justiceControllers.controller('HomeCtrl', ['$scope', '$http', '$location', '$tim
 justiceControllers.controller('CountyDetailCtrl', ['$scope', '$routeParams', 'County', '$rootScope',
   function($scope, $routeParams, County, $rootScope) {
     $scope.class = '';
-    $scope.county = County.get({countyId: $routeParams.countyId}, function(county) {
-      //$scope.mainImageUrl = phone.images[0];
-      console.log(county);
-    });
+    $scope.county = County.get({countyId: $routeParams.countyId}, function(county) {});
 
     $scope.setImage = function(imageUrl) {
       $scope.mainImageUrl = imageUrl;

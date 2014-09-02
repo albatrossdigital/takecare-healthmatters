@@ -159,24 +159,6 @@ accordion{
   height: 575px;
 }
 
-@media screen and (max-width: 1024px) {
-  .header{
-    background-image: url(../img/mapbg-1024.jpg);
-  }
-}
-
-@media screen and (max-width: 1600px) {
-  .header{
-    background-image: url(../img/mapbg-1600.jpg)
-  }
-}
-
-@media screen and (min-width: 1601px) {
-  .header{
-    background-image: url(../img/mapbg-2400.jpg)
-  }
-}
-
 .header {
   padding-top: 1rem;
   
@@ -231,15 +213,84 @@ accordion{
   height: 350px;
 }
 
-.f-dropdown {
-  li.active a{
-    background-color: $gray-light;
+
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h4,
+  accordion dd>a.ng-binding {
+    font-size: 18px;
+  }
+
+  .header{
+    height: 125px;
+
+    .logo {
+      max-width: 120px;
+    }
+
+    ul {
+      display: none;
+    }
+  }
+
+  .home {
+
+    .header {
+      height: 350px
+    }
+
+    .county-input {
+      margin-top: -230px;
+      height: 230px;
+    }
+  }
+  
+}
+
+
+@media screen and (max-width: 1024px) {
+  .header{
+    background-image: url(../img/mapbg-1024.jpg);
+
+    ul {
+      display: none;
+    }
   }
 }
+
+@media screen and (max-width: 1600px) {
+  .header{
+    background-image: url(../img/mapbg-1600.jpg)
+  }
+}
+
+@media screen and (min-width: 1601px) {
+  .header{
+    background-image: url(../img/mapbg-2400.jpg)
+  }
+}
+
 
 .sponsors {
   img {
     margin-right: 1rem;
+  }
+}
+
+.select2-container {
+  width: 100%;
+
+  .select2-choice {
+    padding: .5rem;
+    height: 2.7rem;
+
+    .select2-arrow b {
+      background-position: 0 .4rem;
+    }
   }
 }
 

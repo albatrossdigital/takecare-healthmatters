@@ -4,7 +4,10 @@
     <h1>Search by County</h1>
     <div class="row collapse">
       <div class="small-10 columns">
-        <input type="text" placeholder="Enter a Colorado county..." ng-model="selected" typeahead="item.county for item in data | filter:$viewValue | limitTo:8" typeahead-on-select="countySelected()" typeahead-editable="false" typeahead-min-length="0" class="form-control" id="typeahead">
+        <select ui-select2 id="county" ng-model="select2" ng-click="countySelected()" data-placeholder="Select a Colorado county...">
+          <option value=""></option>
+          <option ng-repeat="item in data" value="{{item.county}}">{{item.county}}</option>
+        </select>
 
       </div>
       <div class="small-2 columns">
