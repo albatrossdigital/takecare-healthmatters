@@ -5,7 +5,6 @@
 var justiceApp = angular.module('justiceApp', [
   'ngRoute',
   'justiceControllers',
-  'justiceFilters',
   'justiceServices'
 ]);
 
