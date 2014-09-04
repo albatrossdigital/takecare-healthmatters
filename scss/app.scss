@@ -164,6 +164,7 @@ accordion{
   
   ul {
       padding-top: 2rem;
+      float: right;
     li {
       list-style: none;
       float: left;
@@ -236,7 +237,23 @@ accordion{
     }
 
     ul {
-      display: none;
+      padding-top: 0;
+      margin: 0;
+      float: none;
+
+      li {
+        float: right;
+        margin-left: 5rem;
+
+        span {
+          display: none;
+        }
+
+        a.button {
+          padding: .5rem 1rem;
+          margin-bottom: .75rem;
+        }
+      }
     }
   }
 
@@ -254,14 +271,6 @@ accordion{
   
 }
 
-
-@media screen and (max-width: 700px) {
-  .header{
-    ul {
-      display: none;
-    }
-  }
-}
 
 @media screen and (max-width: 1024px) {
   .header{
