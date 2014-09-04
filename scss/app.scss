@@ -202,8 +202,11 @@ accordion{
   margin-bottom: 2em;
 
   .search-submit {
-    margin: 0 0 0 1em;
-    line-height: 2.75rem; // @todo: calc this with variables
+    margin: 0 1em;
+
+    .button {
+      line-height: 2.75rem; // @todo: calc this with variables
+    }
   }
 }
 

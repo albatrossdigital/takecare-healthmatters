@@ -3,15 +3,17 @@
   <div class="columns medium-8 medium-push-2 large-6 large-push-3">
     <h1>Search by County</h1>
     <div class="row collapse">
-      <div class="small-10 columns">
+      <div class="medium-10 small-9 columns">
         <select ui-select2 id="county" ng-model="select2" ng-click="countySelected()" data-placeholder="Select a Colorado county...">
           <option value=""></option>
           <option ng-repeat="item in data" value="{{item.county}}">{{item.county}}</option>
         </select>
 
       </div>
-      <div class="small-2 columns">
-        <a href="#" class="button postfix search-submit uppercase">Go</a>
+      <div class="medium-2 small-3 columns">
+        <div class="search-submit">
+          <a href="#" class="button postfix uppercase">Go</a>
+        </div>
       </div>
     </div>
   </div>
