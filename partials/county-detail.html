@@ -40,7 +40,7 @@
           </div>
           <div class="small-12 medium-9 columns">{{county.rcconameentity}}</div>
         </div>
-        <div class="row">
+        <div class="row" ng-if="county.rccophone1">
           <div class="small-12 medium-3 columns"><strong>Phone</strong>
           </div>
           <div class="small-12 medium-9 columns">{{county.rccophone1}}</div>
@@ -54,12 +54,12 @@
         <div class="row">
           <div class="small-12 medium-3 columns"><strong>Website</strong>
           </div>
-          <div class="small-12 medium-9 columns"><a href="{{county.bhowebsite}}">{{county.rccowebsite}}</a></div>
+          <div class="small-12 medium-9 columns"><a href="{{county.rccowebsite}}">{{county.rccowebsite}}</a></div>
         </div>
         <div class="row">
           <div class="small-12 medium-3 columns"><strong>Region</strong>
           </div>
-          <div class="small-12 medium-9 columns">{{county.bhowebsite}}</div>
+          <div class="small-12 medium-9 columns">{{county.regionalcarecollaborativeorganizationrccoregion}}</div>
         </div>
       </accordion-group>
 
@@ -91,7 +91,7 @@
       </accordion-group>
 
       <!-- Problem Solving Courts (x7) -->
-      <accordion-group heading="Problem Solving Court">
+      <accordion-group heading="Problem Solving Court" ng-if="{{county.problemsolvingcourt1nameentity}}">
         <div>
           <h5>{{county.problemsolvingcourt1nameentity}}</h5>
           <div class="row">
@@ -359,7 +359,7 @@
       </accordion-group>
 
       <!-- Jail Information -->
-      <accordion-group heading="Jail Information">
+      <accordion-group heading="Jail Information" ng-if="county.jailnameentity">
         <div class="row">
           <div class="small-12 medium-3 columns"><strong>Name</strong>
           </div>
@@ -394,7 +394,7 @@
 
   </div>
 
-  <div class="columns medium-4">
+  <div class="columns medium-4 column-sidebar">
     <a href="#/" class="button uppercase button-back">Select Another County</a>
     <hr />
     <p class="gray">Terminology</p>

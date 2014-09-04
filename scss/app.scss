@@ -252,13 +252,17 @@ accordion{
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 7100px) {
   .header{
-    background-image: url(../img/mapbg-1024.jpg);
-
     ul {
       display: none;
     }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header{
+    background-image: url(../img/mapbg-1024.jpg);
   }
 }
 
@@ -314,11 +318,15 @@ accordion{
 }
 
 
-.sidebar {
+.column-sidebar {
   .blue-guide {
     padding: 20px;
     background-color: $blue-guide;
     border-radius: $global-radius;
+  }
+
+  .gray {
+    font-weight: bold;
   }
 }
 
