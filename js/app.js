@@ -6,7 +6,9 @@ var justiceApp = angular.module('justiceApp', [
   'ngRoute',
   'justiceControllers',
   'justiceServices',
-  'ui.select2'
+  'ui.select2',
+  'angulartics',
+  'angulartics.google.analytics'
 ]);
 
 justiceApp.config(['$routeProvider',
