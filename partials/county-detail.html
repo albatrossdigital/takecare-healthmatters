@@ -9,7 +9,6 @@
     <accordion>
 
       <!-- BHO -->
-      <a href="" popover="Colorado has five regions that are served by a Behavioral Health Organization (BHO). Each BHO connects Medicaid clients with medically necessary mental health and substance use disorder services in their catchment areas." popover-trigger="" popover-placement="left" class="help-icon-wrapper"><span class='icon-help'></span></a>
       <accordion-group heading="Behavioral Health Organization (BHO)" is-open="true">
         <div class="row">
           <div class="small-12 medium-3 columns"><strong>Name</strong>
@@ -32,10 +31,10 @@
           </div>
           <div class="small-12 medium-9 columns"><div short-url data-field="county.bhowebsite" /></div>
         </div>
+        <div class="row help-wrapper"><a href="#/glossary/bho"><span class='icon-help'></span> What is a Behavioral Health Organization?</a></div>
       </accordion-group>
 
       <!-- RCCO -->
-      <a href="" popover="Colorado has seven regions that are each served by a Regional Care Collaborative Organization (RCCO). Each RCCO connects Medicaid clients to Medicaid providers and also helps Medicaid clients find community and social services in their area. Each RCCO works with clients and health care providers  to coordinate care. A RCCO will also help Medicaid clients obtain health care when they are returning home from the hospital or a nursing facility. A RCCO helps with other care transitions too, like moving from children's health services to adult health services, or moving from a hospital to nursing care." popover-trigger="" popover-placement="left" class="help-icon-wrapper"><span class='icon-help'></span></a>
       <accordion-group heading="Regional Care Collaborative Organization (RCCO)">
         <div class="row">
           <div class="small-12 medium-3 columns"><strong>Name</strong>
@@ -63,10 +62,11 @@
           </div>
           <div class="small-12 medium-9 columns">{{county.regionalcarecollaborativeorganizationrccoregion}}</div>
         </div>
+        <div class="row help-wrapper"><a href="#/glossary/rcco"><span class='icon-help'></span> What is a Regional Care Collaborative Organization?</a></div>
+
       </accordion-group>
 
       <!-- Probation Information -->
-      <a href="" popover="Probation is a sentence option for people convicted of either misdemeanor or felony offenses where the person is living in the community and under supervision of a probation officer with court oversight. Colorado probation officers are part of the judicial system and work as agents of the court." popover-trigger="" popover-placement="left" class="help-icon-wrapper"><span class='icon-help'></span></a>
       <accordion-group heading="Probation Information">
         <h5>Judicial District {{county.judicialdistrictnumber}}</h5>
         <div class="row" ng-if="county.probationcontactfname">
@@ -91,10 +91,10 @@
           </div>
           <div class="small-12 medium-9 columns"><div short-url data-field="county.probationwebsite" /></div>
         </div>
+        <div class="row help-wrapper"><a href="#/glossary/probation"><span class='icon-help'></span> More information about probation</a></div>
       </accordion-group>
 
       <!-- Problem Solving Courts (x7) -->
-      <a href="" popover="Problem solving courts are special courts designed to deal with adult and juvenile defendants whose criminal behavior is directly related to a specific population or condition. For example, some of the problem solving courts in Colorado include: Recovery/Drug Court, Veterans Court, Mental Health Court and Family Court. Participants in problem solving courts must be referred by the district attorney, accepted into the specific court program, and agree to participate. Participants appear in court weekly and are involved in numerous other activities. Problem solving courts are managed by judicial districts." popover-trigger="" popover-placement="left" class="help-icon-wrapper"><span class='icon-help'></span></a>
       <accordion-group heading="Problem Solving Court" ng-if="county.problemsolvingcourt1nameentity">
         <div>
           <h5>{{county.problemsolvingcourt1nameentity}}</h5>
@@ -277,11 +277,10 @@
             <div class="small-12 medium-9 columns"><div short-url data-field="county.problemsolvingcourt7website" /></div>
           </div>
         </div>
-
+        <div class="row help-wrapper"><a href="#/glossary/probation"><span class='icon-help'></span> What are Problem Solving Courts?</a></div>
       </accordion-group>
 
       <!-- Probation Information -->
-      <a href="" popover="Probation is a sentence option for people convicted of either misdemeanor or felony offenses where the person is living in the community and under supervision of a probation officer with court oversight. Colorado probation officers are part of the judicial system and work as agents of the court." popover-trigger="" popover-placement="left" class="help-icon-wrapper"><span class='icon-help'></span></a>
       <accordion-group heading="Parole Information">
         <div>
           <h5>Region {{county.parole1region}}</h5>
@@ -360,11 +359,10 @@
             <div class="small-12 medium-9 columns"><div short-url data-field="county.parole3website" /></div>
           </div>
         </div>
-
+        <div class="row help-wrapper"><a href="#/glossary/probation"><span class='icon-help'></span> More about information about parole</a></div>
       </accordion-group>
 
       <!-- Jail Information -->
-      <a href="" popover="There are 56 county jails in Colorado. County jails are run by a county sheriff and are funded through local government. County jails are commonly used to hold a variety of justice involved individuals, including those who may be serving a sentence for a misdemeanor or are being held in custody pretrial. Some Colorado counties do not operate their own jail but contract with a nearby county jail." popover-trigger="" popover-placement="left" class="help-icon-wrapper"><span class='icon-help'></span></a>
       <accordion-group heading="Jail Information" ng-if="county.jailnameentity">
         <div class="row">
           <div class="small-12 medium-3 columns"><strong>Name</strong>
@@ -393,6 +391,7 @@
           </div>
           <div class="small-12 medium-9 columns"><div short-url data-field="county.jailwebsite" /></div>
         </div>
+        <div class="row help-wrapper"><a href="#/glossary/jails"><span class='icon-help'></span> More about Colorado jails</a></div>
       </accordion-group>
 
     </accordion>

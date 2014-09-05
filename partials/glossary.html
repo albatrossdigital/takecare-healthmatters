@@ -8,38 +8,37 @@
   <div class="medium-7 county-table columns">
     
     <p>Recognizing that this guide uses health and criminal justice system terminology that could be confusing, the following definitions should provide clarity for criminal justice agencies, health care professionals and community organizations as they build connections between justice and health to better assist justice involved clients.</p>
-  
     <accordion>
 
-      <accordion-group heading="Behavioral Health Organization (BHO)" is-open="true">
+      <accordion-group heading="Behavioral Health Organization (BHO)" is-open="(section=='bho') ? true : false">
         Colorado has five regions that are served by a Behavioral Health Organization (BHO). Each BHO connects Medicaid clients with medically necessary mental health and substance use disorder services in their catchment areas. <a href="https://www.colorado.gov/hcpf/behavioral-health-organizations" target="_blank">Learn more</a>.
       </accordion-group>
 
-      <accordion-group heading="Jails">
+      <accordion-group heading="Jails" is-open="(section=='jails') ? true : false">
         There are 56 county jails in Colorado. County jails are run by a county sheriff and are funded through local government. County jails are commonly used to hold a variety of justice involved individuals, including those who may be serving a sentence for a misdemeanor or are being held in custody pretrial. Some Colorado counties do not operate their own jail but contract with a nearby county jail. <a href="http://www.csoc.org/" target="_blank">Learn more</a>.
       </accordion-group>
 
-      <accordion-group heading="Judicial Districts">
+      <accordion-group heading="Judicial Districts" is-open="(section=='judicial') ? true : false">
         Colorado's state judicial system is divided into 22 judicial districts. Each judicial district manages its court system, which may include a number of district courts, county courts and problem solving courts. Judicial districts also manage a probation department and a chief probation officer is assigned to each district. Similarly, every district has an elected district attorney who is responsible for prosecuting criminal cases in their respective district. <a href="http://www.courts.state.co.us/Courts/Map.cfm" target="_blank">Learn more</a>.
       </accordion-group>
 
-      <accordion-group heading="Medicaid">
+      <accordion-group heading="Medicaid" is-open="(section=='medicaid') ? true : false">
         Medicaid is a low-cost, public health insurance program for Coloradans who meet income guidelines. Medicaid is funded jointly by the federal and state government and is administered by the Colorado Department of Health Care Policy and Financing. <a href="https://www.colorado.gov/hcpf/colorado-medicaid" target="_blank">Learn more</a>.
       </accordion-group>
 
-      <accordion-group heading="Parole">
+      <accordion-group heading="Parole" is-open="(section=='parole') ? true : false">
         Parole is a period of supervision after a person is released from prison. Parole officers work for the Colorado Department of Corrections. Common conditions of parole supervision include maintaining an approved residence, employment and attending any recommended treatment programs. <a href="http://www.doc.state.co.us/division-overview" target="_blank">Learn more</a>.
       </accordion-group>
 
-      <accordion-group heading="Probation">
+      <accordion-group heading="Probation" is-open="(section=='probation') ? true : false">
         Probation is a sentence option for people convicted of either misdemeanor or felony offenses where the person is living in the community and under supervision of a probation officer with court oversight. Colorado probation officers are part of the judicial system and work as agents of the court. <a href="http://www.courts.state.co.us/Probation/Index.cfm" target="_blank">Learn more</a>.
       </accordion-group>
 
-      <accordion-group heading="Problem Solving Courts">
+      <accordion-group heading="Problem Solving Courts" is-open="(section=='ps-courts') ? true : false">
         Problem solving courts are special courts designed to deal with adult and juvenile defendants whose criminal behavior is directly related to a specific population or condition. For example, some of the problem solving courts in Colorado include: Recovery/Drug Court, Veterans Court, Mental Health Court and Family Court. Participants in problem solving courts must be referred by the district attorney, accepted into the specific court program, and agree to participate. Participants appear in court weekly and are involved in numerous other activities. Problem solving courts are managed by judicial districts. <a href="http://www.courts.state.co.us/Administration/Unit.cfm?Unit=prbsolcrt" target="_blank">Learn more</a>.
       </accordion-group>
 
-      <accordion-group heading="Regional Care Collaborative Organization (RCCO)">
+      <accordion-group heading="Regional Care Collaborative Organization (RCCO)" is-open="(section=='rcco') ? true : false">
         Colorado has seven regions that are each served by a Regional Care Collaborative Organization (RCCO). Each RCCO connects Medicaid clients to Medicaid providers and also helps Medicaid clients find community and social services in their area. Each RCCO works with clients and health care providers  to coordinate care. A RCCO will also help Medicaid clients obtain health care when they are returning home from the hospital or a nursing facility. A RCCO helps with other care transitions too, like moving from children's health services to adult health services, or moving from a hospital to nursing care. <a href="https://www.colorado.gov/pacific/hcpf/regional-care-collaborative-organizations" target="_blank">Learn more</a>.
       </accordion-group>
 

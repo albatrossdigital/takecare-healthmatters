@@ -140,11 +140,10 @@ accordion{
     }
   }
 
-  .help-icon-wrapper {
-    position: absolute;
-    margin-top: 1rem;
-    right: 1.5rem;
-    font-size: 1.5rem;
+  .row.help-wrapper {
+    font-size: .85em;
+    border-bottom: none;
+    padding: .5rem;
   }
 
   .joyride-nub.right {

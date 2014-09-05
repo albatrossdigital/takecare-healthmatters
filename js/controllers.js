@@ -39,8 +39,20 @@ justiceControllers.controller('CountyDetailCtrl', ['$scope', '$routeParams', 'Co
   }
 ]);
 
-justiceControllers.controller('PageCtrl', ['$scope', '$http', '$location', '$rootScope',
-  function($scope, $http, $location, $rootScope) {
+justiceControllers.controller('PageCtrl', ['$scope', '$routeParams', '$rootScope', '$window', '$timeout',
+  function($scope, $routeParams, $rootScope, $window, $timeout) {
+    $scope.section = $routeParams.sectionId ? $routeParams.sectionId : 'bho';
     $rootScope.class = 'page';
+
+    if ($routeParams.sectionId) {
+      $timeout(function (){
+        $('html, body').animate({
+            scrollTop: 390,
+            scrollLeft: 0
+        }, 1000);
+      }, 1000);
+      
+    }
+    
   }
 ]);
