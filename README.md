@@ -3,6 +3,7 @@
 ### Updating data
 To update the data, run the node.js script:
 ```
-node scripts/build.js > json/data.json
+cd scripts
+node build.js
 ```
 
